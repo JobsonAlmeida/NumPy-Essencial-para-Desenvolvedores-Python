@@ -63,3 +63,96 @@ array_2d = np.array([[10,3,7],
 
 print(array_2d.diagonal())
 
+
+print("----")
+array_2d = np.array([[4,2,12],
+                     [10,5,6],
+                     [1,11,9],
+                     [7,8,3]])
+
+print(array_2d)
+print(array_2d.max(axis=0))
+print(array_2d.max(axis=1))
+
+array_2d_ax_1_kd = array_2d.max(axis=1, keepdims=True)
+print(array_2d_ax_1_kd)
+
+array_2d_ax_0_kd = array_2d.max(axis=0, keepdims=True)
+print(array_2d_ax_0_kd)
+
+
+print("---")
+print(array_2d)
+print(array_2d.max())
+print(array_2d.argmax(axis=0))
+print(array_2d.argmax())
+
+
+print("---")
+print(array_2d)
+print(array_2d.min())
+print(array_2d.argmin(axis=0))
+print(array_2d.argmin())
+
+print("---")
+print(array_2d)
+print(array_2d.ptp(axis=0))
+print(array_2d.ptp(axis=1))
+print(array_2d.ptp())
+
+print('---')
+array_2d = np.arange(1,13).reshape(4,3)
+print(array_2d)
+print(array_2d.clip(min=3.1, max=10))
+
+array_2d = np.linspace(0,1,12).reshape(4,3)
+print(array_2d)
+array_round = array_2d.round(decimals=2)
+print(array_round)
+
+print("---")
+array_2d = np.arange(1,13).reshape(4,3)
+print(array_2d)
+# # print(array_2d.sum(axis=0))
+# # print(array_2d.sum(axis=1, keepdims = True))
+# print(array_2d.cumsum(axis=0))
+# print(array_2d.cumsum(axis=1))
+
+print(array_2d.mean(axis=0))
+print(array_2d.mean(axis=1))
+
+print("---")
+array_2d = np.arange(1,13).reshape(4,3)
+print(array_2d)
+print(array_2d.var(axis=0))
+print(array_2d.var(axis=1))
+print(array_2d.var())
+
+print("---")
+array_2d = np.arange(1,13).reshape(4,3)
+print(array_2d.std(axis=0))
+print(array_2d.std(axis=1))
+print(array_2d.std())
+
+print("---")
+array_2d = np.arange(1,13).reshape(4,3)
+print(array_2d)
+print(array_2d.prod(axis=0))
+print(array_2d.prod(axis=1))
+print(array_2d.prod())
+
+print(array_2d.cumprod(axis=0))
+print(array_2d.cumprod(axis=1))
+print(array_2d.cumprod())
+
+print("---")
+array_2d = np.arange(1,13).reshape(4,3)
+print(array_2d)
+array_2d_gt_0 = array_2d > 0
+array_2d_gt_0.all(axis=0)
+
+array_2d_gt_5 = array_2d > 5
+print(array_2d_gt_0.all(axis=0))
+print(array_2d_gt_5.all(axis=0))
+print(array_2d_gt_0.any(axis=0))
+print(array_2d_gt_5.any(axis=1))
