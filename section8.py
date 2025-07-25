@@ -37,3 +37,49 @@ print("---")
 print(array_2d)
 array_2d_selected = rng.choice(a = array_2d, size=2, axis=1, replace=False)
 print(array_2d_selected)
+
+
+print("---")
+
+
+array = np.arange(10)
+print(array)
+rng.shuffle(array)
+print(array)
+
+array = np.arange(20).reshape(4,5)
+rng.shuffle(array, axis=0)
+print(array)
+print("---")
+
+array = np.arange(20).reshape(4,5)
+print(array)
+rng.shuffle(array, axis=1)
+print(array)
+
+print("---")
+array = np.arange(20).reshape(4,5)
+print(array)
+print(rng.permutation(array, axis=1))
+
+
+print("---")
+array = np.arange(20).reshape(4,5)
+print(array)
+print(rng.permuted(array, axis=0))
+
+print("---")
+
+# plt.hist(rng.beta(a=1, b=100, size=100_000), bins=100)
+# # plt.show()
+
+# print("---")
+# plt.hist(rng.binomial(n=10, p=0.25, size=100_000), bins=100)
+# plt.show()
+
+print("---")
+
+plt.hist(rng.chisquare(df=5, size=100_000), bins=100)
+plt.show()
+
+
